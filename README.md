@@ -1,5 +1,7 @@
 # krax
-Highly unofficial library for programmatic interaction with Krak people search
+Highly unofficial library for programmatic interaction with Krak people search.
+
+It's available [on npm](https://www.npmjs.com/package/krax).
 
 Uses ES2015 features as well as JSDOM, which also uses ES2015 features. Based on screen scraping of the Krak people search, so it's pretty fragile.
 
