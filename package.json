@@ -1,0 +1,30 @@
+{
+  "name": "krax",
+  "version": "0.1.0",
+  "description": "Highly unofficial library for programmatic interaction with Krak people search",
+  "main": "dist/index.js",
+  "types": "dist/index.ds.ts",
+  "scripts": {
+    "test": "tsc && node dist/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proog/krax.git"
+  },
+  "keywords": [
+    "krak"
+  ],
+  "author": "Per Mortensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/proog/krax/issues"
+  },
+  "homepage": "https://github.com/proog/krax#readme",
+  "dependencies": {
+    "jsdom": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^11.0.1",
+    "typescript": "^2.4.1"
+  }
+}
