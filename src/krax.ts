@@ -77,8 +77,18 @@ export class Krax {
         if (this.verbose)
             console.error(`Processing ${url}`);
 
-        let dom = await JSDOM.fromURL(url, options),
-            doc = dom.window.document,
+        let dom: JSDOM;
+        try {
+            dom = await JSDOM.fromURL(url, options);
+        }
+        catch (error) {
+            // krak returns a special 404 page for searches with no results
+            if (error && error["statusCode"] === 404)
+                return [];
+            throw error;
+        }
+
+        let doc = dom.window.document,
             totalPages = 1,
             nextPageUrl: string | null = null,
             totalPagesElement = doc.querySelector(".paging .page-count span"),

@@ -12,6 +12,10 @@ async function test() {
     let distanceResults = await krax.searchByDistance("jens hansen", 12.34, -12.34, 10);
     assert.equal(distanceResults.length, 10, "Distance results did not have the expected length");
 
+    console.log("Running 0 result test");
+    let noResults = await krax.search("doesntexist 32r9n289niniosbuisdf");
+    assert.equal(noResults.length, 0);
+
     console.log("Tests finished");
 }
 
