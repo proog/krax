@@ -102,6 +102,8 @@ export class Krax {
                 results.push(person);
         }
 
+        dom.window.close(); // dispose jsdom instance
+
         if (nextPageUrl && (limit === 0 || results.length < limit))
             return this.processPage(nextPageUrl, page, results, limit);
 
