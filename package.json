@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/proog/krax#readme",
   "dependencies": {
-    "jsdom": "^11.1.0"
+    "jsdom": "^11.11.0"
   },
   "devDependencies": {
     "@types/jsdom": "^11.0.1",
